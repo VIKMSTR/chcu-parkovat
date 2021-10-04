@@ -51,6 +51,7 @@
     <p>Taky se dá (kromě centra). Víc info tady: <a href="https://www.parkovanivbrne.cz">Parkování v Brně</a> </p> 
      <hr/>
     <h6>Aktualizováno: {{updated}}</h6> 
+    <h6>Zdrojáky: <a href="https://github.com/VIKMSTR/chcu-parkovat">na GitHubu</a></h6> 
     </b-container>
 </template>
 <style>
