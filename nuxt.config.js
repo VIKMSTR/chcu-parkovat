@@ -47,7 +47,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: "https://services6.arcgis.com/fUWVlHWZNxUvTUh8/arcgis/rest/services/carparks_live"
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
