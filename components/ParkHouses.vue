@@ -40,8 +40,17 @@
                 </b-col>
                   </b-row>
             </b-alert>
-        </div>
-        <h6>Aktualizováno: {{updated}}</h6> 
+    </div>
+    <b-row v-if="occupiedGarages.length === 0">
+        <b-col cols="12">
+            <p class="lead">Nikde. Vypadá to, že je všude místo! :)</p>
+        </b-col>
+    </b-row>
+    <hr/>
+    <h2>Chcu to nechat na ulici? </h2>
+    <p>Taky se dá (kromě centra). Víc info tady: <a href="https://www.parkovanivbrne.cz">Parkování v Brně</a> </p> 
+     <hr/>
+    <h6>Aktualizováno: {{updated}}</h6> 
     </b-container>
 </template>
 <style>
