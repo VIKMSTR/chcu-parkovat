@@ -1,5 +1,5 @@
 <template>
-  <ParkHouses :parkingData="parkingData"/>
+   <ParkHouses :parkingData="parkingData"/>
 </template>
 
 <script>
