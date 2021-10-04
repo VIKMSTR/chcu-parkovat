@@ -2,7 +2,7 @@
     <div class="parking_container" v-if="parkingData.length >0">
         <div class="garage" v-for="parking in freeGarages" :key="parking.attributes.ObjectId">
             
-            <p>{{parking.attributes.name}} : {{parking.attributes.free}}/{{parking.attributes.capacity}}</p>
+            <p>{{parking.attributes.name}} : {{parking.attributes.free}}/{{parking.attributes.capacity}} <a v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</a></p>
         </div>
     <h2> Obsazeno </h2>
      <div class="garage" v-for="parking in occupiedGarages" :key="parking.attributes.ObjectId">
