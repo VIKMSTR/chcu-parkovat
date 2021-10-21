@@ -1,30 +1,5 @@
 <template>
     <b-container fluid="md" class="parking_container" v-if="parkingData.length >0">
-        <!-- <div class="garage" v-for="parking in freeGarages" :key="parking.attributes.ObjectId">
-            <b-alert variant="success" show v-if="parking.attributes.capacity_procent < 75">
-                <b-row class="d-flex justify-content-between flex-row">
-                <b-col class="flex-column" cols="8" ><p class="textCenter lead">{{parking.attributes.name}} </p>
-                </b-col>
-                <b-col class="flex-column" cols="1"><p class="textCenter float-right lead"><b>{{parking.attributes.free}}</b>/{{parking.attributes.capacity}} </p>
-                </b-col>
-                <b-col class="flex-column " cols= "1"><b-button variant="primary" class="float-right buttonCenter" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button>
-                </b-col>
-                  </b-row>
-            </b-alert> 
-             <b-alert variant="warning" show v-if="parking.attributes.capacity_procent >= 75">
-               <b-row class="d-flex justify-content-between flex-row">
-                    <b-col class="flex-column" cols="8" >
-                        <p class="textCenter lead">{{parking.attributes.name}} </p>
-                    </b-col>
-                    <b-col class="flex-column" cols="1">
-                        <p class="textCenter float-right lead">{{parking.attributes.free}}/{{parking.attributes.capacity}} </p> 
-                    </b-col>
-                    <b-col class="flex-column " cols= "1">
-                        <b-button variant="primary" class="float-right buttonCenter" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button>
-                    </b-col>
-                </b-row>
-            </b-alert>
-        </div> -->
        <b-table-simple borderless card>
          <b-tr  v-for="parking in freeGarages" :key="parking.attributes.ObjectId" >
             <b-td variant="success" show v-if="parking.attributes.capacity_procent < 75"  class="align-middle">{{parking.attributes.name}}</b-td>
@@ -43,20 +18,6 @@
             <b-td variant="secondary" class="text-right align-middle" show v-if="parking.attributes.capacity_procent < 75"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
          </b-tr>
        </b-table-simple> 
-     <!-- <div class="garage" v-for="parking in occupiedGarages" :key="parking.attributes.ObjectId">
-            
-            <b-alert variant="danger" show>
-                 <b-row class="d-flex justify-content-between flex-row">
-                <b-col class="flex-column" cols="8" >
-                    <p class="textCenter lead">{{parking.attributes.name}} </p>
-                    </b-col>
-                <b-col class="flex-column" cols="1"><p class="textCenter float-right lead">{{parking.attributes.free}}/{{parking.attributes.capacity}} </p> 
-                </b-col>
-                <b-col class="flex-column " cols= "1"><b-button variant="primary" class="float-right buttonCenter" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button>
-                </b-col>
-                  </b-row>
-            </b-alert>
-    </div> -->
     <b-row v-if="occupiedGarages.length === 0">
         <b-col cols="12">
             <p class="lead">Nikde. Vypadá to, že je všude místo! :)</p>
