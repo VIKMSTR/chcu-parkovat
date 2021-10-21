@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Chcu parkovat v Brně! Chcu vědět kde je místo! Stránka zobrazující aktuální obsazenost parkovacích domů v Brně.' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#2d89ef' },
       { name: 'theme-color', content: '#b1d3ff' }
@@ -63,7 +63,24 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'en',
+      name: "Chcu parkovat v Brně!",
+      short_name: "Chcuparkovat.cz",
+      icons: [
+          {
+              "src": "/android-chrome-192x192.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          },
+          {
+              "src": "/android-chrome-512x512.png",
+              "sizes": "512x512",
+              "type": "image/png"
+          }
+      ],
+      theme_color: "#b1d3ff",
+      background_color: "#b1d3ff",
+      display: "standalone"
     }
   },
   bootstrapVue: {
