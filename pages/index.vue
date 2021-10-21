@@ -1,4 +1,4 @@
-<template>
+<template >
  <div>
    <b-container class="mt-3">
      <b-jumbotron class="head" header="Chcu parkovat v Brně!" lead="Aktuální přehled obsazenosti parkovacích domů v Brně">
