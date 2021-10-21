@@ -1,0 +1,23 @@
+{
+    "lang": "en",
+    "name": "Chcu parkovat v Brně!",
+    "start_url": ".",
+    "short_name": "Chcuparkovat.cz",
+    "description": "Chcu parkovat v Brně! Chcu vědět kde je místo! Stránka zobrazující aktuální obsazenost parkovacích domů v Brně.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait-primary",
+    "theme_color": "#b1d3ff",
+    "background_color": "#b1d3ff",
+    "display": "standalone"
+  }
