@@ -42,7 +42,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
-
+    '@nuxtjs/robots'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -92,6 +92,10 @@ export default {
   },
   googleAnalytics: {
     id: 'G-3G567XVL16'
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: ''
   }
 
 }
