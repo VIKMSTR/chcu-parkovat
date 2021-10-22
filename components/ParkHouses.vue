@@ -2,20 +2,20 @@
     <b-container fluid="md" class="parking_container" v-if="parkingData.length >0">
        <b-table-simple borderless card>
          <b-tr  v-for="parking in freeGarages" :key="parking.attributes.ObjectId" >
-            <b-td variant="success" show v-if="parking.attributes.capacity_procent < 75"  class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="warning" show v-if="parking.attributes.capacity_procent >= 75" class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="success" class="text-center align-middle" show v-if="parking.attributes.capacity_procent < 75" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
-            <b-td variant="warning" class="text-center align-middle" show v-if="parking.attributes.capacity_procent >= 75" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
-            <b-td variant="success" class="text-right align-middle" show v-if="parking.attributes.capacity_procent < 75"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
-            <b-td variant="warning" class="text-right align-middle" show v-if="parking.attributes.capacity_procent >= 75" > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
+            <b-td variant="success" show v-if="parking.attributes.capacity_procent > 25"  class="align-middle">{{parking.attributes.name}}</b-td>
+            <b-td variant="warning" show v-if="parking.attributes.capacity_procent <= 25" class="align-middle">{{parking.attributes.name}}</b-td>
+            <b-td variant="success" class="text-center align-middle" show v-if="parking.attributes.capacity_procent > 25" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
+            <b-td variant="warning" class="text-center align-middle" show v-if="parking.attributes.capacity_procent <= 25" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
+            <b-td variant="success" class="text-right align-middle" show v-if="parking.attributes.capacity_procent > 25"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
+            <b-td variant="warning" class="text-right align-middle" show v-if="parking.attributes.capacity_procent <= 25" > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
          </b-tr>
        </b-table-simple> 
     <h2> Obsazeno </h2>
     <b-table-simple borderless>
          <b-tr  v-for="parking in occupiedGarages" :key="parking.attributes.ObjectId" >
-            <b-td variant="secondary" show v-if="parking.attributes.capacity_procent < 75"  class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="danger" class="text-center align-middle" show v-if="parking.attributes.capacity_procent < 75" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
-            <b-td variant="secondary" class="text-right align-middle" show v-if="parking.attributes.capacity_procent < 75"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
+            <b-td variant="secondary"  class="align-middle">{{parking.attributes.name}}</b-td>
+            <b-td variant="danger" class="text-center align-middle"  >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
+            <b-td variant="secondary" class="text-right align-middle"   > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
          </b-tr>
        </b-table-simple> 
     <b-row v-if="occupiedGarages.length === 0">
