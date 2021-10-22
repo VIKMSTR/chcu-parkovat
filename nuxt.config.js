@@ -14,7 +14,17 @@ export default {
       { hid: 'description', name: 'description', content: 'Chcu parkovat v Brně! Chcu vědět kde je místo! Stránka zobrazující aktuální obsazenost parkovacích domů v Brně.' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#2d89ef' },
-      { name: 'theme-color', content: '#b1d3ff' }
+      { name: 'theme-color', content: '#b1d3ff' },
+      { name: 'og:title', content: 'Chcu parkovat v Brně!' },
+      { name: 'og:url', content: 'https://chcuparkovat.cz' },
+      { name: 'og:description', content: 'Stránka zobrazující aktuální obsazenost parkovacích domů v Brně.' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:image', content: 'https://chcuparkovat.cz/jam.jpg' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: 'Chcu parkovat v Brně!' },
+      { name: 'twitter:url', content: 'https://chcuparkovat.cz' },
+      { name: 'twitter:image', content: 'https://chcuparkovat.cz/jam.jpg' },
+      { name: 'twitter:creator', content: '@VIKTRCZ' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -85,7 +95,7 @@ export default {
   },
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
-    icons: true
+   // icons: true
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
