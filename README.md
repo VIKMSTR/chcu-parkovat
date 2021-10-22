@@ -27,5 +27,9 @@ Nic. Nikdo mi za to nedal ani korunu. Ani město (tzn. "daňoví poplatníci") a
 Díky moc data.brno.cz za poskytnutí dat. Bez vás by to doslova nešlo! :)
 A taky městu Brnu, že aspoň nějaký to parkování v tom Brně máme!
 
+## Kdo to udělal
 
+Já ve svém volném čase!
+https://www.linkedin.com/in/viktor-krejcir/
+https://twitter.com/VIKTRCZ
 
