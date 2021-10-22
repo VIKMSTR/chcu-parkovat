@@ -1,6 +1,7 @@
 <template>
     <b-container fluid="md" class="parking_container" v-if="parkingData.length >0">
        <b-table-simple borderless card>
+         <b-tr><b-th>Parkoviště</b-th><b-th class="text-center align-middle">Volno</b-th></b-tr>
          <b-tr  v-for="parking in freeGarages" :key="parking.attributes.ObjectId" >
             <b-td variant="success" show v-if="parking.attributes.capacity_procent > 25"  class="align-middle">{{parking.attributes.name}}</b-td>
             <b-td variant="warning" show v-if="parking.attributes.capacity_procent <= 25" class="align-middle">{{parking.attributes.name}}</b-td>
