@@ -25,9 +25,14 @@
         </b-col>
     </b-row>
     <hr/>
+    <p class="font-italic">
+       Žlutě zvýrazněná parkoviště jsou zaplněná více než tří čtvrtin. Může tak být problém najít hezké místo na parkování.
+       </p>
+       <hr/>
     <h2>Chcu to nechat na ulici? </h2>
     <p>Taky se dá (kromě centra). Víc info tady: <a href="https://www.parkovanivbrne.cz">Parkování v Brně</a> </p> 
      <hr/>
+     
     <h6>Aktualizováno: {{updated}}</h6> 
     <h6>Zdrojáky: <a href="https://github.com/VIKMSTR/chcu-parkovat">na GitHubu</a></h6> 
     </b-container>
