@@ -1,12 +1,12 @@
 <template>
     <b-container fluid="md" class="parking_container" v-if="parkingData.length >0">
        <b-table-simple borderless card>
-         <b-tr><b-th>Parkoviště</b-th><b-th class="text-center align-middle">Volno</b-th></b-tr>
+         <b-tr><b-th>Parkoviště</b-th><b-th class="text-center align-middle">Volných míst</b-th></b-tr>
          <b-tr  v-for="parking in freeGarages" :key="parking.attributes.ObjectId" >
             <b-td variant="success" show v-if="parking.attributes.capacity_procent > 25"  class="align-middle">{{parking.attributes.name}}</b-td>
             <b-td variant="warning" show v-if="parking.attributes.capacity_procent <= 25" class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="success" class="text-center align-middle" show v-if="parking.attributes.capacity_procent > 25" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
-            <b-td variant="warning" class="text-center align-middle" show v-if="parking.attributes.capacity_procent <= 25" >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
+            <b-td variant="success" class="text-center align-middle lead" show v-if="parking.attributes.capacity_procent > 25" >{{parking.attributes.free}}</b-td>
+            <b-td variant="warning" class="text-center align-middle lead" show v-if="parking.attributes.capacity_procent <= 25" >{{parking.attributes.free}}</b-td>
             <b-td variant="success" class="text-right align-middle" show v-if="parking.attributes.capacity_procent > 25"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
             <b-td variant="warning" class="text-right align-middle" show v-if="parking.attributes.capacity_procent <= 25" > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
          </b-tr>
@@ -15,7 +15,7 @@
     <b-table-simple borderless>
          <b-tr  v-for="parking in occupiedGarages" :key="parking.attributes.ObjectId" >
             <b-td variant="secondary"  class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="danger" class="text-center align-middle"  >{{parking.attributes.free}}/{{parking.attributes.capacity}}</b-td>
+            <b-td variant="danger" class="text-center align-middle lead"  >{{parking.attributes.free}}</b-td>
             <b-td variant="secondary" class="text-right align-middle"   > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
          </b-tr>
        </b-table-simple> 
