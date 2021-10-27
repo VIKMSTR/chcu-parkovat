@@ -26,7 +26,7 @@
     </b-row>
     <hr/>
     <p class="font-italic">
-       Žlutě zvýrazněná parkoviště jsou zaplněná více než tří čtvrtin. Může tak být problém najít hezké místo na parkování.
+       Žlutě zvýrazněná parkoviště jsou zaplněná více než ze tří čtvrtin. Může tak být problém najít hezké místo na parkování.
        </p>
        <hr/>
     <h2>Chcu to nechat na ulici? </h2>
