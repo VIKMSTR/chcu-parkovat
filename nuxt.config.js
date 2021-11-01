@@ -42,6 +42,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/gtag'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,7 +52,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics',
     '@nuxtjs/robots'
   ],
 
@@ -100,9 +100,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  googleAnalytics: {
-    id: 'G-3G567XVL16'
-  },
+  // googleAnalytics: {
+  //   id: 'G-3G567XVL16'
+  // },
   robots: {
     UserAgent: '*',
     Disallow: ''
