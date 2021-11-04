@@ -52,6 +52,8 @@ table {
 <script>
 import moment from "moment"
 export default {
+  amp: 'hybrid',
+  ampLayout: 'default.amp',
   name: 'ParkHouses',
   props: {
     parkingData: Array,

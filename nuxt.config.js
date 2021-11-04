@@ -63,6 +63,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/amp'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -103,6 +104,9 @@ export default {
   // googleAnalytics: {
   //   id: 'G-3G567XVL16'
   // },
+  amp: {
+    // Options
+  },
   robots: {
     UserAgent: '*',
     Disallow: ''

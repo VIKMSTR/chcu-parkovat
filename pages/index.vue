@@ -36,7 +36,10 @@ export default {
   },
   
   mounted() {
+    if (!this.$isAMP) {
+
     this.getParkingData()
+    }
   },
   methods: {
   async getParkingData(){
