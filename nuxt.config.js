@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Chcu parkovat v Brně! Chcu vědět kde je místo! Stránka zobrazující aktuální obsazenost parkovacích domů v Brně.' },
+      { hid: 'description', name: 'description', content: 'Chci parkovat v Brně! Chci vědět kde je místo! Stránka zobrazující aktuální obsazenost parkovacích domů v Brně. Parkování v Brně zase o něco přehledněji.' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#2d89ef' },
       { name: 'theme-color', content: '#b1d3ff' },
