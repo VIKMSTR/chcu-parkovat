@@ -1,7 +1,9 @@
 <template >
  <div>
+  
    <b-container class="mt-3">
-     <b-jumbotron class="head" header="Chcu parkovat v Brně!" lead="Aktuální přehled obsazenosti parkovacích domů v Brně">
+     <LangSelector />
+     <b-jumbotron class="head" header="Chcu parkovat v Brně!" :lead="$t('description')">
      
      </b-jumbotron>
     <!-- <b-col cols="12" class="head">
@@ -22,12 +24,14 @@
 </style>
 <script>
 import parkHouses from "@/components/ParkHouses.vue";
+import langSelector from "@/components/LangSelector.vue";
 
 export default {
 
   name: "landing-page",
   components: {
-    parkHouses
+    parkHouses,
+    langSelector
   },
   data() {
     return {

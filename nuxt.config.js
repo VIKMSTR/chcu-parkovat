@@ -1,3 +1,5 @@
+import { locales } from "moment"
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -63,6 +65,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -106,6 +109,55 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: ''
-  }
+  },
+
+  i18n: {
+    baseUrl: 'https://www.chcuparkovat.cz',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.js'
+      },
+      {
+        code: 'cs',
+        iso: 'cs-CZ',
+        file: 'cs.js'
+      }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'chcuparkovat_locale',
+      redirectOn: 'root',  // recommended
+    },
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'cs',
+    seo: true,
+    vueI18n: {
+      dateTimeFormats: {
+        en: {
+          long: {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            hour: 'numeric',
+            minute: 'numeric'
+          },
+        },
+        cs: {
+          long: {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long',
+            hour: 'numeric',
+            minute: 'numeric'
+          },
+        }
+      },
+    } 
+  },
 
 }
