@@ -1,6 +1,7 @@
 export default async (context, locale) => {
     return await Promise.resolve({
       welcome: 'Vítejte',
+      title: 'Chcu parkovat v Brně! - aktuální obsazenost parkovacích domů v Brně.',
       description: 'Aktuální přehled obsazenosti parkovacích domů v Brně',
       parking: 'Parkoviště',
       free: 'Volných míst',

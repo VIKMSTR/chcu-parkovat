@@ -47,7 +47,12 @@ export default {
     const res = await this.$store.dispatch("getParkingData");
     this.parkingData = res.data.features
   }
-  }
-  
+  },
+ head() {
+      return {
+        title: this.$t('title')
+      }
+} 
 }
+
 </script>
