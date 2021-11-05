@@ -5,10 +5,20 @@
          <b-tr  v-for="parking in freeGarages" :key="parking.attributes.ObjectId" >
             <b-td variant="success" show v-if="parking.attributes.capacity_procent > 25"  class="align-middle">{{parking.attributes.name}}</b-td>
             <b-td variant="warning" show v-if="parking.attributes.capacity_procent <= 25" class="align-middle">{{parking.attributes.name}}</b-td>
-            <b-td variant="success" class="text-center align-middle lead" show v-if="parking.attributes.capacity_procent > 25" >{{parking.attributes.free}}</b-td>
-            <b-td variant="warning" class="text-center align-middle lead" show v-if="parking.attributes.capacity_procent <= 25" >{{parking.attributes.free}}</b-td>
-            <b-td variant="success" class="text-right align-middle" show v-if="parking.attributes.capacity_procent > 25"  > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
-            <b-td variant="warning" class="text-right align-middle" show v-if="parking.attributes.capacity_procent <= 25" > <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button></b-td>
+            <b-td variant="success" class="text-center align-middle lead numcell" show v-if="parking.attributes.capacity_procent > 25" >{{parking.attributes.free}}</b-td>
+            <b-td variant="warning" class="text-center align-middle lead numcell" show v-if="parking.attributes.capacity_procent <= 25" >{{parking.attributes.free}}</b-td>
+            <b-td variant="success" class="text-right align-middle" show v-if="parking.attributes.capacity_procent > 25"  > 
+              <div class="btn-group-vertical">
+              <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button>
+              <b-button variant="info" v-bind:href="'http://www.waze.com/ul?ll=' +parking.attributes.Latitude +',' + parking.attributes.Longitude + '&z1240'">Waze</b-button>
+              </div>
+            </b-td>
+            <b-td variant="warning" class="text-right align-middle" show v-if="parking.attributes.capacity_procent <= 25" > 
+              <div class="btn-group-vertical">
+                <b-button variant="primary" v-bind:href="'http://www.google.com/maps/place/' +parking.attributes.Latitude +',' + parking.attributes.Longitude">mapa</b-button>
+                <b-button variant="info" v-bind:href="'http://www.waze.com/ul?ll=' +parking.attributes.Latitude +',' + parking.attributes.Longitude + '&z=1240'">Waze</b-button>
+              </div>
+            </b-td>
          </b-tr>
        </b-table-simple> 
     <h2> Obsazeno </h2>
@@ -47,6 +57,11 @@ table {
 }
 .textCenter {
     padding-top: 1em
+}
+.numcell{
+  max-width: 3em;
+  min-width: 1em;
+  width: 3em;
 }
 </style>
 <script>
