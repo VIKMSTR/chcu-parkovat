@@ -44,6 +44,14 @@ export default {
   plugins: [
     '@/plugins/gtag'
   ],
+  sitemap: {
+    hostname: 'https://www.chcuparkovat.cz',
+    // i18n: true,
+    // i18n: {
+    //   locales: ['en', 'cs'],
+    //   routesNameSeparator: '___'
+    // }
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -63,6 +71,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
